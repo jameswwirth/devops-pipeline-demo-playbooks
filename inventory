@@ -1,16 +1,16 @@
 
 # these hosts will get packer, vmware workstation,
 # and tools needed for pushing images to vsphere
+# this default configuration will install all tools
+# to this local host
 [packer]
-10.153.252.224
-192.168.1.115
-192.168.1.84
+127.0.0.1 ansible_connection=local
 
 # These hosts will get jenkins installed and confiigured.
 # Add them to the packer group if building packer images
 [jenkins]
-192.168.1.84
+127.0.0.1 ansible_connection=local
 
 # Machines that will download and host any needed binaries.
 [assets]
-192.168.1.115
+127.0.0.1 ansible_connection=loca
